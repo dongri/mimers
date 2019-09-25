@@ -3,6 +3,7 @@ name = "mimers"
 version = "0.1.0"
 authors = ["Dongri Jin <dongrify@gmail.com>"]
 edition = "2018"
+description = "MIME Function"
 repository = "https://github.com/dongri/mimers"
 license = "MIT"
 keywords = ["MIME","RFC2047","encodeword"]
