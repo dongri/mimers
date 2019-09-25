@@ -1,0 +1,16 @@
+[package]
+name = "mimers"
+version = "0.1.0"
+authors = ["Dongri Jin <dongrify@gmail.com>"]
+edition = "2018"
+repository = "https://github.com/dongri/mimers"
+license = "MIT"
+keywords = ["MIME","RFC2047","encode word"]
+documentation = "https://docs.rs/mimers"
+readme = "README.md"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+quoted_printable = "0.4.1" # RFC 2045
+base64 = "0.10.1"
