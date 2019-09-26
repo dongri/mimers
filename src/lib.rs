@@ -34,7 +34,7 @@ impl WordEncoder {
     let to_charset = self.charset;
     let mut encoded_str = match self.encoding {
       Encoding::BEncoding => encode(data.as_bytes()),
-      Encoding::QEncoding => encode_to_str(data).replace("",""),
+      Encoding::QEncoding => encode_to_str(data).replace("\r\n=",""),
     };
     encoded_str = encoded_str.replace(" ", "_");
     let mut last_token = "";
@@ -60,5 +60,6 @@ mod tests {
     assert_eq!(e.encode_word("abc日本語".to_string()), "=?UTF-8?Q?abc=E6=97=A5=E6=9C=AC=E8=AA=9E?=");
     assert_eq!(e.encode_word("abc中文".to_string()), "=?UTF-8?Q?abc=E4=B8=AD=E6=96=87?=");
     assert_eq!(e.encode_word("abc def".to_string()), "=?UTF-8?Q?abc_def?=");
+    assert_eq!(e.encode_word("あいうえおABC中国".to_string()), "=?UTF-8?Q?=E3=81=82=E3=81=84=E3=81=86=E3=81=88=E3=81=8AABC=E4=B8=AD=E5=9B=BD?=");
   }
 }

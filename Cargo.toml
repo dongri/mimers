@@ -1,6 +1,6 @@
 [package]
 name = "mimers"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Dongri Jin <dongrify@gmail.com>"]
 edition = "2018"
 description = "MIME Function"
